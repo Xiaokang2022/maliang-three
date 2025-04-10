@@ -13,6 +13,16 @@ Changelog / 更新日志
 > * 🟠 **Deprecated / 弃用**
 > * 🟤 **Refactored / 重构**
 
+🔖 `1.0.4`
+-----------
+
+🕓 *Release Date / 发布日期 : 2025-04-10*
+
+🔵 **Optimized / 优化**
+
+* Improve the performance of method `center` (about 126% increase!)  
+提升方法 `center` 的性能（大概提升 126%！）
+
 🔖 `1.0.3`
 -----------
 

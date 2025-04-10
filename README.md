@@ -80,7 +80,7 @@ for i in m, -m:
         points.append([j, i, 0])
 
 for p in itertools.combinations(points, 3):
-    dis = math.hypot(*[statistics.mean(c[i] for c in p) for i in range(3)])
+    dis = math.hypot(*[statistics.fmean(c[i] for c in p) for i in range(3)])
     if math.isclose(dis, dis_side):
         three.Plane(space, *p, fill=colors[count], outline="grey")
         count += 1

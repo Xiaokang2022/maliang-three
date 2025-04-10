@@ -357,7 +357,7 @@ class Component:
 
     def center(self):  # type: () -> tuple[float, float, float]
         """几何中心"""
-        return tuple(statistics.mean(xyz) for xyz in zip(*self.coordinates))
+        return tuple(statistics.fmean(xyz) for xyz in zip(*self.coordinates))
 
     def _project(self, distance, canvas=None):
         # type: (float, Canvas | Space | None) -> list[tuple[float, float]]
@@ -630,7 +630,7 @@ class Geometry:
 
     def center(self):  # type: () -> tuple[float, float, float]
         """几何中心"""
-        return tuple(statistics.mean(axis) for axis in zip(*set(tuple(coord) for side in self.sides for coord in side.coordinates)))
+        return tuple(statistics.fmean(axis) for axis in zip(*set(tuple(coord) for side in self.sides for coord in side.coordinates)))
 
     def update(self):  # type: () -> None
         """更新几何体"""
